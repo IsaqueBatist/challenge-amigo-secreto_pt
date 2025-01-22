@@ -14,6 +14,7 @@ const showSelectedFriend = (friend) => {
 
 const addFriend = () => {
   const nameOfFriend = document.getElementById('amigo')
+  if(nameOfFriend.value.trim() === '') return window.alert("Por favor, preencha o campo")
   names.push(nameOfFriend.value)
   updateListOfFriends(nameOfFriend.value)
   nameOfFriend.value = ''
