@@ -2,7 +2,13 @@
 
 let names = []
 
-const adicionarAmigo = () => {
+const addFriend = () => {
   const nameOfFriend = document.getElementById('amigo').value
   names.push(nameOfFriend)
+  updateListOfFriends(nameOfFriend)
+}
+
+const updateListOfFriends = (newName) => {
+  const list = document.getElementById('listaAmigos')
+  list.innerHTML += `<li>${newName}</li>`
 }
