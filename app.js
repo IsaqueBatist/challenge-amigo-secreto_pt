@@ -21,6 +21,7 @@ const addFriend = () => {
 }
 
 const drawFriend = () => {
+  if(names.length < 2) return window.alert("Por favor, incluir no mínimo 2 pessoas")
   const randomNum = Math.floor(Math.random() * (names.length - 0 + 0) + 0);
   const selectedFriend = names[randomNum]
   showSelectedFriend(selectedFriend)
